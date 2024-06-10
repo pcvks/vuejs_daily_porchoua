@@ -69,8 +69,8 @@
                     <div class="col-md-6">
 
                         <!-- /.card -->
-                        <div class="overflow-auto">
                             <h3 class="text-center text-bold text-primary">ເນື້ອໃນການບັນທຶກ</h3>
+                        <div class="overflow-auto">
                             <div class="justify-content-between d-flex">
                                 <p></p>
                                 <router-link to="/print_note" class="btn btn-primary"><i class="fas fa-print mr-1"></i>Print PDF</router-link>

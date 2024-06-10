@@ -46,6 +46,12 @@
               </router-link>
             </li>
             <li class="nav-item menu-open">
+              <router-link to="/upload_image" class="nav-link text-bold">
+                <i class="nav-icon fas fa-image"></i>
+                <p>ບັນທຶກຮູບພາບ</p>
+              </router-link>
+            </li>
+            <li class="nav-item menu-open">
               <router-link to="/income_expenditure" class="nav-link text-bold">
                 <i class="nav-icon fas fa-">₭</i>
                 <p>ລາຍຮັບ / ລາຍຈ່າຍ</p>
@@ -63,11 +69,11 @@
                 <p>ແຜນການປີນີ້</p>
               </router-link>
             </li>
-            <!-- <li class="nav-item menu-open">
-              <button @click="logout" class="nav-link li-button text-bold">
-                <i class="nav-icon fas fa-sign-out-alt"></i>
-                <p>Logout</p></button>
-            </li> -->
+            <li class="nav-item menu-open">
+            <button @click="logout" class="nav-link li-button text-bold">
+              <i class="nav-icon fas fa-sign-out-alt"></i>
+              <p>Logout</p></button>
+          </li>
           </ul>
         </nav>
         <!-- /.sidebar-menu -->
@@ -77,10 +83,18 @@
   </template>
   
   <script>
-//   import { authState } from './auth';
+  import { authState } from './auth';
   export default {
     name: 'SidebarComponent',
-    
+    methods: {
+    logout() {
+      authState.isAuthenticated = false;
+      authState.user = null;
+      // Redirect to login page if necessary
+      this.$router.push('/');
+      window.location.reload();
+    }
+  }
   }
   
   </script>

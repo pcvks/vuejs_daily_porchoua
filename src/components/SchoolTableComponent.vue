@@ -37,9 +37,9 @@
             <!-- right column -->
             <div class="col-md-12">
               <!-- /.card -->
-              <div class="overflow-auto">
                 <h3 class="text-center text-bold text-primary">ຕາຕະລາງຮຽນ</h3>
-                <a
+                
+              <div class="overflow-auto"><a
                   href="#"
                   class="btn btn-primary"
                   data-toggle="modal"

@@ -70,11 +70,11 @@
                     <div class="col-md-7">
 
                         <!-- /.card -->
-                        <div class="overflow-auto">
                             <h3 class="text-center text-bold text-primary">ລາຍຊື່ແຜນການ</h3>
+                        <div class="overflow-auto">
                             <div class="justify-content-between d-flex">
-                                <router-link to="/plan_success" class="btn btn-success"><i class="fas fa-arrow-circle-right mr-1"></i>ແຜນການທີ່ສຳເລັດແລ້ວ</router-link>
-                                <router-link to="/plan_not_yet_success" class="btn btn-danger"><i class="fas fa-arrow-circle-right mr-1"></i>ແຜນການທີ່ຍັງບໍ່ທັນສຳເລັດ</router-link>
+                                <router-link to="/plan_success" class="btn btn-sm btn-success"><i class="fas fa-arrow-circle-right mr-1"></i>ແຜນການທີ່ສຳເລັດແລ້ວ</router-link>
+                                <router-link to="/plan_not_yet_success" class="btn btn-sm btn-danger"><i class="fas fa-arrow-circle-right mr-1"></i>ແຜນການທີ່ຍັງບໍ່ທັນສຳເລັດ</router-link>
                             </div>
                             <table class="table table-striped">
                                 <thead>

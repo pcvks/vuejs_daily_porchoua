@@ -81,8 +81,9 @@
                     <div class="col-md-6">
 
                         <!-- /.card -->
+                        <h3 class="text-center text-bold text-primary">ລາຍຊື່admin</h3>
                         <div class="overflow-auto">
-                            <h3 class="text-center text-bold text-primary">ລາຍຊື່admin</h3>
+                            
                             <table class="table table-striped">
                                 <thead>
                                     <tr>

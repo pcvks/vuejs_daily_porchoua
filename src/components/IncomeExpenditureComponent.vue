@@ -37,8 +37,8 @@
           <!-- right column -->
           <div class="col-md-6">
             <!-- /.card -->
-            <div class="overflow-auto">
               <h3 class="text-center text-bold text-success">ລາຍຮັບທັງໝົດ</h3>
+            <div class="overflow-auto">
               <div class="justify-content-between d-flex">
                 <a
                 href="#"
@@ -96,8 +96,8 @@
           </div>
           <div class="col-md-6">
             <!-- /.card -->
-            <div class="overflow-auto">
               <h3 class="text-center text-bold text-danger">ລາຍຈ່າຍທັງໝົດ</h3>
+            <div class="overflow-auto">
               <div class="justify-content-between d-flex">
                 <a
                 href="#"
