@@ -321,7 +321,7 @@ export default {
                 // Handle successful update (e.g., show success message, navigate to another page)
                 // alert('Category updated successfully');
                 this.showUpdateSuccessMessage();
-                this.$router.push('/note'); // Navigate to categories list or another appropriate page
+                this.$router.push('/note'); // Navigate to categories list or another appropriate
             } catch (error) {
                 console.error(error.response.data);
                 // Handle error (e.g., show error message)
