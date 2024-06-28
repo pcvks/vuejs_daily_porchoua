@@ -38,7 +38,6 @@
           <div class="col-md-6">
             <!-- /.card -->
               <h3 class="text-center text-bold text-success">ລາຍຮັບທັງໝົດ</h3>
-            <div class="overflow-auto">
               <div class="justify-content-between d-flex">
                 <a
                 href="#"
@@ -55,6 +54,8 @@
                 ><i class="fas fa-print mr-2"></i>Print PDF</router-link
               >
               </div>
+            <div class="overflow-auto">
+              
               <table class="table table-striped">
                 <thead>
                   <tr>
@@ -97,7 +98,6 @@
           <div class="col-md-6">
             <!-- /.card -->
               <h3 class="text-center text-bold text-danger">ລາຍຈ່າຍທັງໝົດ</h3>
-            <div class="overflow-auto">
               <div class="justify-content-between d-flex">
                 <a
                 href="#"
@@ -114,6 +114,8 @@
                 ><i class="fas fa-print mr-2"></i>Print PDF</router-link
               >
               </div>
+            <div class="overflow-auto">
+              
               <table class="table table-striped">
                 <thead>
                   <tr>

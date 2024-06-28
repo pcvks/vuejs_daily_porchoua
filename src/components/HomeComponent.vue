@@ -34,7 +34,7 @@
                         <!-- small box -->
                         <div class="small-box bg-info">
                             <div class="inner">
-                                <h3>{{ sum_incomes }} ₭</h3>
+                                <h4 class="text-bold">{{ sum_incomes }} ₭</h4>
                                 <p>ລາຍຮັບທັງໝົດ</p>
                             </div>
                             <div class="icon">
@@ -49,7 +49,7 @@
                         <!-- small box -->
                         <div class="small-box bg-danger">
                             <div class="inner">
-                                <h3>{{ sum_expenditures }} ₭</h3>
+                                <h4 class="text-bold">{{ sum_expenditures }} ₭</h4>
                                 <p>ລາຍຈ່າຍທັງໝົດ</p>
                             </div>
                             <div class="icon">
@@ -64,7 +64,7 @@
                         <!-- small box -->
                         <div class="small-box bg-warning">
                             <div class="inner">
-                                <h3>{{ sum_money_remainings }} ₭</h3>
+                                <h4 class="text-bold">{{ sum_money_remainings }} ₭</h4>
                                 <p>ເງິນທີ່ເຫຼືອ</p>
                             </div>
                             <div class="icon">
@@ -79,7 +79,7 @@
                         <!-- small box -->
                         <div class="small-box bg-success">
                             <div class="inner">
-                                <h3>{{ sum_expenditure_todays }} ₭</h3>
+                                <h4 class="text-bold">{{ sum_expenditure_todays }} ₭</h4>
                                 <p>ລາຍຈ່າຍມື້ນີ້</p>
                             </div>
                             <div class="icon">
