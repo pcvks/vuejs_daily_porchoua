@@ -184,7 +184,7 @@
       // for Income
       async fetchSchool_Table() {
         try {
-          const response = await axios.get("http://localhost:3000/api/school_table");
+          const response = await axios.get("https://nodejs-api-daily-porchoua.onrender.com/api/school_table");
           if (Array.isArray(response.data)) {
             this.school_tables = response.data;
           } else {
@@ -201,7 +201,7 @@
       async createSchool_Table() {
         try {
           const response = await axios.post(
-            "http://localhost:3000/api/create-school_table",
+            "https://nodejs-api-daily-porchoua.onrender.com/api/create-school_table",
             {
               day: this.day_inp,
               first_time: this.first_time_inp,
@@ -258,7 +258,7 @@
       async deleteSchool_Table(School_Table_ID) {
         try {
           const response = await axios.delete(
-            `http://localhost:3000/api/delete-school_table/${School_Table_ID}`
+            `https://nodejs-api-daily-porchoua.onrender.com/api/delete-school_table/${School_Table_ID}`
           );
           console.log(response.data); // Log the response from the server
           Swal.fire({

@@ -95,7 +95,7 @@ export default {
         // for Admin
         async fetchPlanSuccess() {
             try {
-                const response = await axios.get('http://localhost:3000/api/plan_not_yet_success');
+                const response = await axios.get('https://nodejs-api-daily-porchoua.onrender.com/api/plan_not_yet_success');
                 if (Array.isArray(response.data)) {
                     this.plans = response.data;
                 } else {
@@ -109,7 +109,7 @@ export default {
         },
         async createPlanSuccess() {
             try {
-                const response = await axios.post('http://localhost:3000/api/create-plan', {
+                const response = await axios.post('https://nodejs-api-daily-porchoua.onrender.com/api/create-plan', {
                     plan_name: this.plan_name,
                     percent: this.percent,
                     status: this.status,

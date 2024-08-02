@@ -202,7 +202,7 @@ export default {
         // for Admin
         async fetchPlans() {
             try {
-                const response = await axios.get('http://localhost:3000/api/plan');
+                const response = await axios.get('https://nodejs-api-daily-porchoua.onrender.com/api/plan');
                 if (Array.isArray(response.data)) {
                     this.plans = response.data;
                 } else {
@@ -216,7 +216,7 @@ export default {
         },
         async createPlan() {
             try {
-                const response = await axios.post('http://localhost:3000/api/create-plan', {
+                const response = await axios.post('https://nodejs-api-daily-porchoua.onrender.com/api/create-plan', {
                     plan_name: this.Plan_name_inp,
                     active: this.active,
                     percent: this.percent_inp,
@@ -269,7 +269,7 @@ export default {
 
         async deletePlan(Plan_ID) {
             try {
-                const response = await axios.delete(`http://localhost:3000/api/delete-plan/${Plan_ID}`);
+                const response = await axios.delete(`https://nodejs-api-daily-porchoua.onrender.com/api/delete-plan/${Plan_ID}`);
                 console.log(response.data); // Log the response from the server
                 Swal.fire({
                     title: "ລົບລ້າງ!",
@@ -342,7 +342,7 @@ export default {
         async fetchPlanDetails(Plan_ID) {
             this.Plan_ID = Plan_ID; // Set the current category ID
             try {
-                const response = await axios.get(`http://localhost:3000/api/plan/${Plan_ID}`);
+                const response = await axios.get(`https://nodejs-api-daily-porchoua.onrender.com/api/plan/${Plan_ID}`);
                 this.updatedPlan_name = response.data.plan_name;// Set the existing category name to the input field
                 this.updatedpercent = response.data.percent;
                 this.updatedactive = response.data.active;
@@ -354,7 +354,7 @@ export default {
         },
         async updatePlan() {
             try {
-                const response = await axios.put(`http://localhost:3000/api/update-plan/${this.Plan_ID}`, {
+                const response = await axios.put(`https://nodejs-api-daily-porchoua.onrender.com/api/update-plan/${this.Plan_ID}`, {
                     plan_name: this.updatedPlan_name,
                     percent: this.updatedpercent,
                     active: this.updatedactive,

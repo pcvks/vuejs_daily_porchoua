@@ -100,7 +100,7 @@ export default {
         // for Admin
         async fetchIncome() {
             try {
-                const response = await axios.get('http://localhost:3000/api/income');
+                const response = await axios.get('https://nodejs-api-daily-porchoua.onrender.com/api/income');
                 if (Array.isArray(response.data)) {
                     this.income_datas = response.data;
                 } else {
@@ -114,7 +114,7 @@ export default {
         },
         async createIncome() {
             try {
-                const response = await axios.post('http://localhost:3000/api/create-income', {
+                const response = await axios.post('https://nodejs-api-daily-porchoua.onrender.com/api/create-income', {
                     income: this.income,
                     income_reason: this.income_reason,
                     m_status: this.m_status,

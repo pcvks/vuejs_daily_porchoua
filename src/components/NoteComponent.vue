@@ -167,7 +167,7 @@ export default {
         // for Admin
         async fetchNote() {
             try {
-                const response = await axios.get('http://localhost:3000/api/note');
+                const response = await axios.get('https://nodejs-api-daily-porchoua.onrender.com/api/note');
                 if (Array.isArray(response.data)) {
                     this.notes = response.data;
                 } else {
@@ -181,7 +181,7 @@ export default {
         },
         async createNote() {
             try {
-                const response = await axios.post('http://localhost:3000/api/create-note', {
+                const response = await axios.post('https://nodejs-api-daily-porchoua.onrender.com/api/create-note', {
                     content: this.content,
                     module: this.module,
                     timestamp: this.timestamp
@@ -230,7 +230,7 @@ export default {
 
         async deleteNote(noteID) {
             try {
-                const response = await axios.delete(`http://localhost:3000/api/delete-note/${noteID}`);
+                const response = await axios.delete(`https://nodejs-api-daily-porchoua.onrender.com/api/delete-note/${noteID}`);
                 console.log(response.data); // Log the response from the server
                 Swal.fire({
                     title: "ລົບລ້າງ!",
@@ -303,7 +303,7 @@ export default {
         async fetchNoteDetail(Note_ID) {
             this.Note_ID = Note_ID; // Set the current category ID
             try {
-                const response = await axios.get(`http://localhost:3000/api/note/${Note_ID}`);
+                const response = await axios.get(`https://nodejs-api-daily-porchoua.onrender.com/api/note/${Note_ID}`);
                 this.updatedContent = response.data.content;// Set the existing category name to the input field
                 this.updatedmodule = response.data.module;
             } catch (error) {
@@ -313,7 +313,7 @@ export default {
         },
         async updateNote() {
             try {
-                const response = await axios.put(`http://localhost:3000/api/update-note/${this.Note_ID}`, {
+                const response = await axios.put(`https://nodejs-api-daily-porchoua.onrender.com/api/update-note/${this.Note_ID}`, {
                     content: this.updatedContent,
                     module: this.updatedmodule,
                 });

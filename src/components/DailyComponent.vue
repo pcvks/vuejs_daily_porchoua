@@ -425,7 +425,7 @@ export default {
         // for daily
         async fetchDaily_d() {
             try {
-                const response = await axios.get('http://localhost:3000/api/daily');
+                const response = await axios.get('https://nodejs-api-daily-porchoua.onrender.com/api/daily');
                 if (Array.isArray(response.data)) {
                     this.dailies_d = response.data;
                 }else{
@@ -439,7 +439,7 @@ export default {
         },
         async createDaily_d() {
             try {
-                const response = await axios.post('http://localhost:3000/api/create-daily', {
+                const response = await axios.post('https://nodejs-api-daily-porchoua.onrender.com/api/create-daily', {
                     five_six: this.five_six_d,
                     six_seven: this.six_seven_d,
                     seven_eight: this.seven_eight_d,
@@ -524,7 +524,7 @@ export default {
 
         async deleteDaily_d(Daily_ID) {
             try {
-                const response = await axios.delete(`http://localhost:3000/api/delete-daily/${Daily_ID}`);
+                const response = await axios.delete(`https://nodejs-api-daily-porchoua.onrender.com/api/delete-daily/${Daily_ID}`);
                 console.log(response.data); // Log the response from the server
                 Swal.fire({
                     title: "ລົບລ້າງ!",
@@ -597,7 +597,7 @@ export default {
         async fetchDailyDetails(Daily_ID) {
             this.Daily_ID = Daily_ID; // Set the current category ID
             try {
-                const response = await axios.get(`http://localhost:3000/api/daily/${Daily_ID}`);
+                const response = await axios.get(`https://nodejs-api-daily-porchoua.onrender.com/api/daily/${Daily_ID}`);
                 this.five_six_dp = response.data.five_six;
                 this.six_seven_dp = response.data.six_seven;
                 this.seven_eight_dp = response.data.seven_eight;
@@ -625,7 +625,7 @@ export default {
         },
         async updateDaily() {
             try {
-                const response = await axios.put(`http://localhost:3000/api/update-daily/${this.Daily_ID}`, {
+                const response = await axios.put(`https://nodejs-api-daily-porchoua.onrender.com/api/update-daily/${this.Daily_ID}`, {
                     five_six: this.five_six_dp,
                     six_seven: this.six_seven_dp,
                     seven_eight: this.seven_eight_dp,

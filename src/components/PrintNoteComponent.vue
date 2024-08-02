@@ -97,7 +97,7 @@ export default {
         // for Admin
         async fetchNote() {
             try {
-                const response = await axios.get('http://localhost:3000/api/note');
+                const response = await axios.get('https://nodejs-api-daily-porchoua.onrender.com/api/note');
                 if (Array.isArray(response.data)) {
                     this.notes = response.data;
                 } else {
@@ -111,7 +111,7 @@ export default {
         },
         async createNote() {
             try {
-                const response = await axios.post('http://localhost:3000/api/create-note', {
+                const response = await axios.post('https://nodejs-api-daily-porchoua.onrender.com/api/create-note', {
                     content: this.content,
                     module: this.module,
                     timestamp: this.timestamp
