@@ -12,7 +12,7 @@
             <img src="dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
           </div>
           <div class="info">
-            <router-link to="/dashboard" class="d-block text-white">ປໍ້ຈົວວ່າງ ກ່າງເສີ</router-link>
+            <router-link to="/dashboard" class="d-block text-white">ແອັດມິນ</router-link>
           </div>
         </div>
   
