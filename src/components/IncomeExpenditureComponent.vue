@@ -769,6 +769,7 @@ export default {
         // alert('Category updated successfully');
         this.showUpdateSuccessMessage();
         this.$router.push("/income_expenditure"); // Navigate to categories list or another appropriate page
+        this.fetchIncome_s();
       } catch (error) {
         console.error(error.response.data);
         // Handle error (e.g., show error message)
@@ -790,6 +791,7 @@ export default {
         // alert('Category updated successfully');
         this.showUpdateSuccessMessage();
         this.$router.push("/income_expenditure"); // Navigate to categories list or another appropriate page
+        this.fetchExpenditure_s();
       } catch (error) {
         console.error(error.response.data);
         // Handle error (e.g., show error message)
