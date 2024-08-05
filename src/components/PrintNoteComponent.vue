@@ -20,7 +20,7 @@
 
                         <div class="col-md-2"></div>
                         <div class="col-md-2">
-                            <h5 class="text-bold">ຊື່ຜູ້ດູແລ: ປໍ້ຈົວວ່າງ</h5>
+                            <h5 class="text-bold">ຊື່ຜູ້ດູແລ: ແອັດມິນ</h5>
                         </div>
                         <div class="col-md-4">
                             <h2 class="text-center text-primary text-bold">ໃບບິນການບັນທຶກ</h2> 
