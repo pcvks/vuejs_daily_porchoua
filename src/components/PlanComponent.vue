@@ -365,6 +365,7 @@ export default {
                 // alert('Category updated successfully');
                 this.showUpdateSuccessMessage();
                 this.$router.push('/plan'); // Navigate to categories list or another appropriate page
+                this.fetchPlans();
             } catch (error) {
                 console.error(error.response.data);
                 // Handle error (e.g., show error message)
