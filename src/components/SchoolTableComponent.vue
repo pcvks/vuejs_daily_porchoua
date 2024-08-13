@@ -143,6 +143,12 @@
                     >
                     <input type="text" v-model="fourth_time_inp" class="form-control" required placeholder="ຊົ່ວໂມງ 4">
                   </div>
+                  <div class="form-group ml-4">
+                    <label for=""
+                      >ຊົ່ວໂມງ 4 <span class="text-danger">*</span></label
+                    >
+                    <input type="date" class="form-control" required placeholder="ddmmyy">
+                  </div>
                 </div>
               </div>
               <div class="modal-footer justify-content-between">
