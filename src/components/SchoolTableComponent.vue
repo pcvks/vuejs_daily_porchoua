@@ -46,6 +46,7 @@
                   data-target="#modal-insert_school_table"
                   ><i class="fas fa-plus mr-2"></i>ເພີ່ມຕາຕະລາງ</a
                 >
+                <a href="tel:+8562076589225" class="btn btn-success"><i class="fas fa-phone"></i>&nbsp;ຕິດຕໍ່</a>
                 <table class="table table-striped">
                   <thead>
                     <tr>
