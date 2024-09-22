@@ -97,7 +97,7 @@ export default {
         // for Admin
         async fetchNote() {
             try {
-                const response = await axios.get('https://nodejs-api-daily-porchoua.onrender.com/api/note');
+                const response = await axios.get('https://nodejs-api-daily-porchoua.onrender.com/api/all-note');
                 if (Array.isArray(response.data)) {
                     this.notes = response.data;
                 } else {

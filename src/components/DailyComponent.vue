@@ -81,7 +81,7 @@
                                         <td>{{ daily_d.twentyone_twentytwo }}</td>
                                         <td>{{ daily_d.twentytwo_twentythree }}</td>
                                         <td>{{ daily_d.twentythree_five }}</td>
-                                        <td>{{ daily_d.day }}</td>
+                                        <td>{{ daily_d.days }}</td>
                                         <td><b class="text-success">{{ daily_d.timestamp }}</b></td>
                                         <td><button href="#" class="btn btn-warning" data-toggle="modal"
                                                 @click="fetchDailyDetails(daily_d.id)" data-target="#modal-lg"><i
@@ -459,7 +459,7 @@ export default {
                     twentyone_twentytwo: this.twentyone_twentytwo_d,
                     twentytwo_twentythree: this.twentytwo_twentythree_d,
                     twentythree_five: this.twentythree_five_d,
-                    day: this.day_d,
+                    days: this.day_d,
                     timestamp: this.timestamp
                 });
                 console.log(response.data);
@@ -645,7 +645,7 @@ export default {
                     twentyone_twentytwo: this.twentyone_twentytwo_dp,
                     twentytwo_twentythree: this.twentytwo_twentythree_dp,
                     twentythree_five: this.twentythree_five_dp,
-                    day: this.day_dp
+                    days: this.day_dp
                 });
                 console.log(response.data);
                 // Handle successful update (e.g., show success message, navigate to another page)

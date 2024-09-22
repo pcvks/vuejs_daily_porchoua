@@ -100,7 +100,7 @@ export default {
         // for Admin
         async fetchExpenditure() {
             try {
-                const response = await axios.get('https://nodejs-api-daily-porchoua.onrender.com/api/expenditure');
+                const response = await axios.get('https://nodejs-api-daily-porchoua.onrender.com/api/all-expenditure');
                 if (Array.isArray(response.data)) {
                     this.expenditure_datas = response.data;
                 } else {
