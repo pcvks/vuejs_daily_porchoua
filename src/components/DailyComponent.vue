@@ -617,7 +617,7 @@ export default {
                 this.twentyone_twentytwo_dp = response.data.twentyone_twentytwo;
                 this.twentytwo_twentythree_dp = response.data.twentytwo_twentythree;
                 this.twentythree_five_dp = response.data.twentythree_five;
-                this.day_dp = response.data.day;
+                this.day_dp = response.data.days;
             } catch (error) {
                 console.error(error.response.data);
                 // Handle error (e.g., show error message)
