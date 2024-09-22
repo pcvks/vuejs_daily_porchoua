@@ -469,7 +469,7 @@ export default {
                 this.fetchDaily_d();
                 this.resetDaily_d_Form();
             } catch (error) {
-                console.error('Error creating employee:', error);
+                console.error('Error creating employee:', error.data.response);
                 // alert('Failed to create employee');
                 this.showErrorMessage();
             }
