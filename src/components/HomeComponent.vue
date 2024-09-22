@@ -185,8 +185,8 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr v-for="daily_d in dailies_d" :key="daily_d.id">
-                                        <td>{{ daily_d.id }}</td>
+                                <tr v-for="(daily_d, index) in dailies_d" :key="daily_d.id">
+                                        <td>{{ index + 1 }}</td>
                                         <td>{{ daily_d.five_six }}</td>
                                         <td>{{ daily_d.six_seven }}</td>
                                         <td>{{ daily_d.seven_eight }}</td>
@@ -529,7 +529,7 @@ export default {
                 });
         },
         async fetchSumExpenditureToday() {
-            axios.get('https://nodejs-api-daily-porchoua.onrender.com/api/sum-expenditure_today')
+            axios.get('https://nodejs-api-daily-porchoua.onrender.com/api/sum-expenditure_todays')
                 .then(response => {
                     this.sum_expenditure_todays = response.data.sum_expenditure_today;
                 })
