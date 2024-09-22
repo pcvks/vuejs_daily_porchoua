@@ -79,7 +79,7 @@
                         <!-- small box -->
                         <div class="small-box bg-success">
                             <div class="inner">
-                                <h4 class="text-bold">{{ sum_expenditure_todays }} ₭</h4>
+                                <h4 class="text-bold">{{ sum_expenditure_today_s }} ₭</h4>
                                 <p>ລາຍຈ່າຍມື້ນີ້</p>
                             </div>
                             <div class="icon">
@@ -261,7 +261,7 @@ export default {
             sum_incomes: 0,
             sum_expenditures: 0,
             sum_money_remainings: 0,
-            sum_expenditure_todays: 0
+            sum_expenditure_today_s: 0
         };
     },
     created() {
@@ -531,7 +531,7 @@ export default {
         async fetchSumExpenditureToday() {
             axios.get('https://nodejs-api-daily-porchoua.onrender.com/api/sum-expenditure_todays')
                 .then(response => {
-                    this.sum_expenditure_todays = response.data.sum_expenditure_today;
+                    this.sum_expenditure_today_s = response.data.sum_expenditure_todays;
                 })
                 .catch(error => {
                     console.error('There was an error fetching the count:', error);
