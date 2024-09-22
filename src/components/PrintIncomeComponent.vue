@@ -49,8 +49,8 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr v-for="income_data in income_datas" :key="income_data.id">
-                                        <td>{{ income_data.id }}</td>
+                                    <tr v-for="(income_data, index) in income_datas" :key="income_data.id">
+                                        <td>{{ index + 1 }}</td>
                                         <td><b class="text-success">{{ income_data.income }}</b></td>
                                         <td><b>{{ income_data.income_reason }}</b></td>
                                         <td><b class="text-success">{{ income_data.m_status }}</b></td>

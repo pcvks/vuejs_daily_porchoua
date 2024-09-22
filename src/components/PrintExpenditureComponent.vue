@@ -49,8 +49,8 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr v-for="expenditure_data in expenditure_datas" :key="expenditure_data.id">
-                                        <td>{{ expenditure_data.id }}</td>
+                                    <tr v-for="(expenditure_data, index) in expenditure_datas" :key="expenditure_data.id">
+                                        <td>{{ index + 1 }}</td>
                                         <td><b class="text-danger">{{ expenditure_data.expenditure }}</b></td>
                                         <td><b>{{ expenditure_data.expenditure_reason }}</b></td>
                                         <td><b class="text-danger">{{ expenditure_data.m_status }}</b></td>

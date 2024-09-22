@@ -47,8 +47,8 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr v-for="note in notes" :key="note.id">
-                                        <td>{{ note.id }}</td>
+                                    <tr v-for="(note, index) in notes" :key="note.id">
+                                        <td>{{ index + 1 }}</td>
                                         <td><b>{{ note.content }}</b></td>
                                         <td><b class="text-success">{{ note.timestamp }}</b></td>
                                     </tr>

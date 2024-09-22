@@ -96,8 +96,8 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr v-for="admin_a in admins_a" :key="admin_a.id">
-                                        <td>{{ admin_a.id }}</td>
+                                    <tr v-for="(admin_a, index) in admins_a" :key="admin_a.id">
+                                        <td>{{ index + 1 }}</td>
                                         <td>{{ admin_a.name }}</td>
                                         <td>{{ admin_a.email }}</td>
                                         <td>{{ admin_a.phone }}</td>

@@ -42,8 +42,8 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr v-for="plan in plans" :key="plan.id">
-                                        <td>{{ plan.id }}</td>
+                                    <tr v-for="(plan, index) in plans" :key="plan.id">
+                                        <td>{{ index + 1 }}</td>
                                         <td><b class="text-success">{{ plan.plan_name }}</b></td>
                                         <td><b class="text-success">{{ plan.percent }} %</b></td>
                                         <td><b class="text-success">{{ plan.active }} %</b></td>

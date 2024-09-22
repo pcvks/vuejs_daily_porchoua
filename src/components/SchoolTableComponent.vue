@@ -45,11 +45,12 @@
                   data-toggle="modal"
                   data-target="#modal-insert_school_table"
                   ><i class="fas fa-plus mr-2"></i>ເພີ່ມຕາຕະລາງ</a
-                >&nbsp;
+                >
+                <!-- &nbsp;
                 <a href="tel:+8562076589225" class="btn btn-success"><i class="fas fa-phone"></i>&nbsp;ຕິດຕໍ່</a>&nbsp;
                 <a href="https://wa.me/+8562076589225" class="btn btn-success"><i class="fab fa-whatsapp"></i>&nbsp;Whatsapp</a>&nbsp;
                 <a href="https://www.facebook.com/profile.php?id=100079975531285" class="btn btn-primary"><i class="fab fa-facebook"></i>&nbsp;Facebook</a>&nbsp;
-                <a href="mailto:kangserpobtsuasvaaj@gmail.com" class="btn btn-primary"><i class="fab fa-envelope"></i>&nbsp;Mail</a>&nbsp;
+                <a href="mailto:kangserpobtsuasvaaj@gmail.com" class="btn btn-primary"><i class="fab fa-envelope"></i>&nbsp;Mail</a>&nbsp; -->
                 <table class="table table-striped">
                   <thead>
                     <tr>
@@ -64,8 +65,8 @@
                     </tr>
                   </thead>
                   <tbody>
-                    <tr v-for="school_table in school_tables" :key="school_table.id">
-                      <td>{{ school_table.id }}</td>
+                    <tr v-for="(school_table, index) in school_tables" :key="school_table.id">
+                      <td>{{ index + 1 }}</td>
                       <td>{{ school_table.day }}</td>
                       <td>{{ school_table.first_time }}</td>
                       <td>{{ school_table.second_time }}</td>
