@@ -129,10 +129,10 @@
                 </thead>
                 <tbody>
                   <tr
-                    v-for="expenditure_s in expenditures_s"
+                    v-for="(expenditure_s, index) in expenditures_s"
                     :key="expenditure_s.id"
                   >
-                    <td>{{ expenditure_s.id }}</td>
+                    <td>{{ index + 1 }}</td>
                     <td><b class="text-danger">{{ expenditure_s.expenditure }}</b></td>
                     <td><b>{{ expenditure_s.expenditure_reason }}</b></td>
                     <td><b class="text-danger">{{ expenditure_s.m_status }}</b></td>
