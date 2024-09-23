@@ -1,5 +1,5 @@
 <template>
-    <div class="hold-transition login-page border-1 rounded-2 login-background">
+    <div class="hold-transition login-page border-1 rounded-5 login-background">
       <div class="login-box">
         <div class="card">
           <div class="card-body">
