@@ -67,7 +67,7 @@
                   <tbody>
                     <tr v-for="(school_table, index) in school_tables" :key="school_table.id">
                       <td>{{ index + 1 }}</td>
-                      <td>{{ school_table.day }}</td>
+                      <td>{{ school_table.days }}</td>
                       <td>{{ school_table.first_time }}</td>
                       <td>{{ school_table.second_time }}</td>
                       <td>{{ school_table.third_time }}</td>
@@ -222,7 +222,7 @@
           const response = await axios.post(
             "https://nodejs-api-daily-porchoua.onrender.com/api/create-school_table",
             {
-              day: this.day_inp,
+              days: this.day_inp,
               first_time: this.first_time_inp,
               second_time: this.second_time_inp,
               third_time: this.third_time_inp,
