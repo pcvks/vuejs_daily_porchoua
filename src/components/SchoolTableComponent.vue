@@ -150,9 +150,15 @@
                   </div>
                   <div class="form-group ml-4">
                     <label for=""
-                      >ຊົ່ວໂມງ 4 <span class="text-danger">*</span></label
+                      >ຕັ້ງແຕ່່ວັນທີ່ <span class="text-danger">*</span></label
                     >
-                    <input type="date" class="form-control" required placeholder="ddmmyy">
+                    <input type="date" class="form-control" v-model="since_date_inp" required placeholder="ddmmyy">
+                  </div>
+                  <div class="form-group ml-4">
+                    <label for=""
+                      >ຈົນເຖິງວັນທີ່ <span class="text-danger">*</span></label
+                    >
+                    <input type="date" class="form-control" v-model="unit_date_inp" required placeholder="ddmmyy">
                   </div>
                 </div>
               </div>
@@ -184,6 +190,8 @@
         first_time_inp: "",
         second_time_inp: "",
         third_time_inp: "",
+        since_date_inp: "",
+        unit_date_inp: "",
         School_Table_ID: null,
         school_tables: [],
       };
@@ -219,7 +227,8 @@
               second_time: this.second_time_inp,
               third_time: this.third_time_inp,
               fourth_time: this.fourth_time_inp,
-              timestamp: this.timestamp,
+              since_date: this.since_date_inp,
+              until_date: this.unit_date_inp
             }
           );
           console.log(response.data);
@@ -246,6 +255,8 @@
         this.second_time_inp = "";
         this.third_time_inp = "";
         this.fourth_time_inp = "";
+        this.since_date_inp = "";
+        this.unit_date_inp = "";
       },
       // function delete employee sale
       async confirmDeleteSchool_Table_a(School_Table_ID) {
