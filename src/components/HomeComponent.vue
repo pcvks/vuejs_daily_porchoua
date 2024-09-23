@@ -47,6 +47,20 @@
                     <!-- ./col -->
                     <div class="col-lg-3 col-6">
                         <!-- small box -->
+                        <div class="small-box bg-success">
+                            <div class="inner">
+                                <h4 class="text-bold">{{ sum_income_by_mom_s }} ₭</h4>
+                                <p>ແມ່ເອົາໃຫ້ທັງໝົດ</p>
+                            </div>
+                            <div class="icon">
+                                <i class="fas">₭</i>
+                            </div>
+                            <a href="#" class="small-box-footer">ລາຍລະອຽດ<i
+                                    class="fas fa-arrow-circle-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-6">
+                        <!-- small box -->
                         <div class="small-box bg-danger">
                             <div class="inner">
                                 <h4 class="text-bold">{{ sum_expenditures }} ₭</h4>
@@ -70,10 +84,11 @@
                             <div class="icon">
                                 <i class="fas">₭</i>
                             </div>
-                            <a href="./moneynotyetused.php" class="small-box-footer">ລາຍລະອຽດ<i
+                            <a href="#" class="small-box-footer">ລາຍລະອຽດ<i
                                     class="fas fa-arrow-circle-right"></i></a>
                         </div>
                     </div>
+                    
                     <!-- ./col -->
                     <div class="col-lg-3 col-6">
                         <!-- small box -->
@@ -86,6 +101,36 @@
                                 <i class="fas">₭</i>
                             </div>
                             <a href="./expendituretodayform.php" class="small-box-footer">ລາຍລະອຽດ<i
+                                    class="fas fa-arrow-circle-right"></i></a>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-3 col-6">
+                        <!-- small box -->
+                        <div class="small-box bg-danger">
+                            <div class="inner">
+                                <h4 class="text-bold">{{ sum_expenditure_this_month_s }} ₭</h4>
+                                <p>ລາຍຈ່າຍເດືອນນີ້</p>
+                            </div>
+                            <div class="icon">
+                                <i class="fas">₭</i>
+                            </div>
+                            <a href="./expendituredetailform.php" class="small-box-footer">ລາຍລະອຽດ<i
+                                    class="fas fa-arrow-circle-right"></i></a>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-3 col-6">
+                        <!-- small box -->
+                        <div class="small-box bg-info">
+                            <div class="inner">
+                                <h4 class="text-bold">{{ sum_income_by_month_s }} ₭</h4>
+                                <p>ລາຍຮັບເດືອນນີ້</p>
+                            </div>
+                            <div class="icon">
+                                <i class="fas">₭</i>
+                            </div>
+                            <a href="./expendituredetailform.php" class="small-box-footer">ລາຍລະອຽດ<i
                                     class="fas fa-arrow-circle-right"></i></a>
                         </div>
                     </div>
@@ -261,7 +306,10 @@ export default {
             sum_incomes: 0,
             sum_expenditures: 0,
             sum_money_remainings: 0,
-            sum_expenditure_today_s: 0
+            sum_expenditure_today_s: 0,
+            sum_income_this_month_s: 0,
+            sum_expenditure_this_month_s: 0,
+            sum_income_by_month_s: 0
         };
     },
     created() {
@@ -276,6 +324,9 @@ export default {
         this.fetchSumExpenditure();
         this.fetchSumMoneyRemaining();
         this.fetchSumExpenditureToday();
+        this.fetchSumIncomeThisMonth();
+        this.fetchSumExpenditureThisMonth();
+        this.fetchSumIncomeByMom();
     },
     methods: {
         // for daily
@@ -537,6 +588,35 @@ export default {
                     console.error('There was an error fetching the count:', error);
                 });
         },
+        async fetchSumIncomeThisMonth() {
+            axios.get('https://api-note-dailes.onrender.com/api/sum-income_this_month')
+                .then(response => {
+                    this.sum_income_this_month_s = response.data.sum_income_this_month;
+                })
+                .catch(error => {
+                    console.error('There was an error fetching the count:', error);
+                });
+        },
+        
+        async fetchSumExpenditureThisMonth() {
+            axios.get('https://api-note-dailes.onrender.com/api/sum-expenditure_this_month')
+                .then(response => {
+                    this.sum_expenditure_this_month_s = response.data.sum_expenditure_this_month;
+                })
+                .catch(error => {
+                    console.error('There was an error fetching the count:', error);
+                });
+        },
+        async fetchSumIncomeByMom() {
+            axios.get('https://api-note-dailes.onrender.com/api/sum-income_by_mom')
+                .then(response => {
+                    this.sum_income_by_mom_s = response.data.sum_income_by_mom;
+                })
+                .catch(error => {
+                    console.error('There was an error fetching the count:', error);
+                });
+        },
+        
         
         // Other methods...
     }
