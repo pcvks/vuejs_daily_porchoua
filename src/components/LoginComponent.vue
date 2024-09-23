@@ -1,5 +1,5 @@
 <template>
-    <div class="hold-transition login-page login-background">
+    <div class="hold-transition login-page rounded-2 login-background">
       <div class="login-box">
         <div class="card">
           <div class="card-body">
@@ -25,18 +25,10 @@
                 </div>
               </div>
               <div class="row">
-                <div class="col-8">
-                  <div class="icheck-primary">
-                    <input type="checkbox" id="remember">
-                    <label for="remember">
-                      ຍັງຈື່ລະຫັດບໍ?
-                    </label>
-                  </div>
-                </div>
-                <div class="col-4">
-                  <button type="submit" class="btn btn-primary btn-block"><i
+                
+                  <button type="submit" class="btn btn-primary btn-block w-100"><i
                       class="fas fa-sign-out-alt">Login</i></button>
-                </div>
+                
               </div>
             </form>
             <p v-if="error" class="text-danger">{{ error }}</p>
