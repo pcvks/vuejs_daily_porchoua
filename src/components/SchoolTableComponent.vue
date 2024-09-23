@@ -37,7 +37,7 @@
             <!-- right column -->
             <div class="col-md-12">
               <!-- /.card -->
-                <h3 class="text-center text-bold text-primary">ຕາຕະລາງຮຽນ</h3>
+                <h3 class="text-center text-bold text-primary">ຕາຕະລາງປະຈຳວັນ</h3>
                 
               <div class="overflow-auto"><a
                   href="#"
@@ -158,7 +158,7 @@
                     <label for=""
                       >ຈົນເຖິງວັນທີ່ <span class="text-danger">*</span></label
                     >
-                    <input type="date" class="form-control" v-model="unit_date_inp" required placeholder="ddmmyy">
+                    <input type="date" class="form-control" v-model="until_date_inp" required placeholder="ddmmyy">
                   </div>
                 </div>
               </div>
@@ -191,7 +191,7 @@
         second_time_inp: "",
         third_time_inp: "",
         since_date_inp: "",
-        unit_date_inp: "",
+        until_date_inp: "",
         School_Table_ID: null,
         school_tables: [],
       };
@@ -228,7 +228,7 @@
               third_time: this.third_time_inp,
               fourth_time: this.fourth_time_inp,
               since_date: this.since_date_inp,
-              until_date: this.unit_date_inp
+              until_date: this.until_date_inp
             }
           );
           console.log(response.data);
@@ -256,7 +256,7 @@
         this.third_time_inp = "";
         this.fourth_time_inp = "";
         this.since_date_inp = "";
-        this.unit_date_inp = "";
+        this.until_date_inp = "";
       },
       // function delete employee sale
       async confirmDeleteSchool_Table_a(School_Table_ID) {
