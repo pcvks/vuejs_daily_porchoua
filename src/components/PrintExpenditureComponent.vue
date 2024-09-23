@@ -100,7 +100,7 @@ export default {
         // for Admin
         async fetchExpenditure() {
             try {
-                const response = await axios.get('https://nodejs-api-daily-porchoua.onrender.com/api/all-expenditure');
+                const response = await axios.get('https://api-note-dailes.onrender.com/api/all-expenditure');
                 if (Array.isArray(response.data)) {
                     this.expenditure_datas = response.data;
                 } else {
@@ -114,7 +114,7 @@ export default {
         },
         async createExpenditure() {
             try {
-                const response = await axios.post('https://nodejs-api-daily-porchoua.onrender.com/api/create-expenditure', {
+                const response = await axios.post('https://api-note-dailes.onrender.com/api/create-expenditure', {
                     expenditure: this.expenditure,
                     expenditure_reason: this.expenditure_reason,
                     m_status: this.m_status,

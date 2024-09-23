@@ -487,7 +487,7 @@ export default {
     // for Income
     async fetchIncome_s() {
       try {
-        const response = await axios.get("https://nodejs-api-daily-porchoua.onrender.com/api/income");
+        const response = await axios.get("https://api-note-dailes.onrender.com/api/income");
         if (Array.isArray(response.data)) {
           this.incomes_s = response.data;
         } else {
@@ -503,7 +503,7 @@ export default {
     async fetchExpenditure_s() {
       try {
         const response = await axios.get(
-          "https://nodejs-api-daily-porchoua.onrender.com/api/expenditure"
+          "https://api-note-dailes.onrender.com/api/expenditure"
         );
         if (Array.isArray(response.data)) {
           this.expenditures_s = response.data;
@@ -520,7 +520,7 @@ export default {
     async createIncome() {
       try {
         const response = await axios.post(
-          "https://nodejs-api-daily-porchoua.onrender.com/api/create-income",
+          "https://api-note-dailes.onrender.com/api/create-income",
           {
             income: this.income_inp,
             income_reason: this.income_reason_inp,
@@ -544,7 +544,7 @@ export default {
     async createExpenditure() {
       try {
         const response = await axios.post(
-          "https://nodejs-api-daily-porchoua.onrender.com/api/create-expenditure",
+          "https://api-note-dailes.onrender.com/api/create-expenditure",
           {
             expenditure: this.expenditure_inp,
             expenditure_reason: this.expenditure_reason_inp,
@@ -619,7 +619,7 @@ export default {
     async deleteExpenditure(Expenditure_ID) {
       try {
         const response = await axios.delete(
-          `https://nodejs-api-daily-porchoua.onrender.com/api/delete-daily/${Expenditure_ID}`
+          `https://api-note-dailes.onrender.com/api/delete-daily/${Expenditure_ID}`
         );
         console.log(response.data); // Log the response from the server
         Swal.fire({
@@ -655,7 +655,7 @@ export default {
     async deleteIncome(Income_Id) {
       try {
         const response = await axios.delete(
-          `https://nodejs-api-daily-porchoua.onrender.com/api/delete-daily/${Income_Id}`
+          `https://api-note-dailes.onrender.com/api/delete-daily/${Income_Id}`
         );
         console.log(response.data); // Log the response from the server
         Swal.fire({
@@ -730,7 +730,7 @@ export default {
       this.Income_ID = Income_ID; // Set the current category ID
       try {
         const response = await axios.get(
-          `https://nodejs-api-daily-porchoua.onrender.com/api/income/${Income_ID}`
+          `https://api-note-dailes.onrender.com/api/income/${Income_ID}`
         );
         this.income_upd = response.data.income; // Set the existing category name to the input field
         this.income_reason_upd = response.data.income_reason;
@@ -744,7 +744,7 @@ export default {
       this.Expenditure_ID = Expenditure_ID; // Set the current category ID
       try {
         const response = await axios.get(
-          `https://nodejs-api-daily-porchoua.onrender.com/api/expenditure/${Expenditure_ID}`
+          `https://api-note-dailes.onrender.com/api/expenditure/${Expenditure_ID}`
         );
         this.expenditure_upd = response.data.expenditure; // Set the existing category name to the input field
         this.expenditure_reason_upd = response.data.expenditure_reason;
@@ -757,7 +757,7 @@ export default {
     async updateIncome() {
       try {
         const response = await axios.put(
-          `https://nodejs-api-daily-porchoua.onrender.com/api/update-income/${this.Income_ID}`,
+          `https://api-note-dailes.onrender.com/api/update-income/${this.Income_ID}`,
           {
             income: this.income_upd,
             income_reason: this.income_reason_upd,
@@ -779,7 +779,7 @@ export default {
     async updateExpenditure() {
       try {
         const response = await axios.put(
-          `https://nodejs-api-daily-porchoua.onrender.com/api/update-expenditure/${this.Expenditure_ID}`,
+          `https://api-note-dailes.onrender.com/api/update-expenditure/${this.Expenditure_ID}`,
           {
             expenditure: this.expenditure_upd,
             expenditure_reason: this.expenditure_reason_upd,

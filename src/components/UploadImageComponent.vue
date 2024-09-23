@@ -76,7 +76,7 @@
                   <tbody>
                     <tr v-for="image in images" :key="image.id">
                       <td>{{ image.id }}</td>
-                      <td><img :src="`https://nodejs-api-daily-porchoua.onrender.com/uploads/${image.filename}`" alt="Uploaded Image" width="100"></td>
+                      <td><img :src="`https://api-note-dailes.onrender.com/uploads/${image.filename}`" alt="Uploaded Image" width="100"></td>
                       <td>{{ image.timestamp }}</td>
                       <td>
                           
@@ -125,7 +125,7 @@
         formData.append("image", this.selectedFile);
   
         try {
-          const response = await axios.post("https://nodejs-api-daily-porchoua.onrender.com/api/upload", formData, {
+          const response = await axios.post("https://api-note-dailes.onrender.com/api/upload", formData, {
             headers: {
               "Content-Type": "multipart/form-data",
             },
@@ -169,7 +169,7 @@
       },
       async fetchImages() {
         try {
-          const response = await axios.get("https://nodejs-api-daily-porchoua.onrender.com/api/images");
+          const response = await axios.get("https://api-note-dailes.onrender.com/api/images");
           this.images = response.data;
           this.timestamp = response.data;
         } catch (error) {
@@ -197,7 +197,7 @@
       async deleteImage(Image_ID) {
         try {
           const response = await axios.delete(
-            `https://nodejs-api-daily-porchoua.onrender.com/api/delete-image/${Image_ID}`
+            `https://api-note-dailes.onrender.com/api/delete-image/${Image_ID}`
           );
           console.log(response.data); // Log the response from the server
           Swal.fire({

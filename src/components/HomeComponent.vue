@@ -281,7 +281,7 @@ export default {
         // for daily
         async fetchDaily_d() {
             try {
-                const response = await axios.get('https://nodejs-api-daily-porchoua.onrender.com/api/daily');
+                const response = await axios.get('https://api-note-dailes.onrender.com/api/daily');
                 if (Array.isArray(response.data)) {
                     this.dailies_d = response.data;
                 }else{
@@ -295,7 +295,7 @@ export default {
         },
         async createDaily_d() {
             try {
-                const response = await axios.post('https://nodejs-api-daily-porchoua.onrender.com/api/create-admin', {
+                const response = await axios.post('https://api-note-dailes.onrender.com/api/create-admin', {
                     five_six: this.five_six_d,
                     six_seven: this.six_seven_d,
                     seven_eight: this.seven_eight_d,
@@ -379,7 +379,7 @@ export default {
 
         async deleteDaily_d(Daily_ID) {
             try {
-                const response = await axios.delete(`https://nodejs-api-daily-porchoua.onrender.com/api/delete-daily/${Daily_ID}`);
+                const response = await axios.delete(`https://api-note-dailes.onrender.com/api/delete-daily/${Daily_ID}`);
                 console.log(response.data); // Log the response from the server
                 Swal.fire({
                     title: "ລົບລ້າງ!",
@@ -452,7 +452,7 @@ export default {
         async fetchDailyDetails(Daily_ID) {
             this.Daily_ID = Daily_ID; // Set the current category ID
             try {
-                const response = await axios.get(`https://nodejs-api-daily-porchoua.onrender.com/api/daily/${Daily_ID}`);
+                const response = await axios.get(`https://api-note-dailes.onrender.com/api/daily/${Daily_ID}`);
                 this.updatedName = response.data.name;// Set the existing category name to the input field
                 this.updatedemail = response.data.email;
                 this.updatedpassword = '';
@@ -464,7 +464,7 @@ export default {
         },
         
         async fetchCountPlan() {
-            axios.get('https://nodejs-api-daily-porchoua.onrender.com/api/count-plan')
+            axios.get('https://api-note-dailes.onrender.com/api/count-plan')
                 .then(response => {
                     this.count_plans = response.data.count_plan;
                 })
@@ -474,7 +474,7 @@ export default {
         },
         
         async fetchCountPlanSuccess() {
-            axios.get('https://nodejs-api-daily-porchoua.onrender.com/api/count-plan_success')
+            axios.get('https://api-note-dailes.onrender.com/api/count-plan_success')
                 .then(response => {
                     this.count_plan_successes = response.data.count_plan_success;
                 })
@@ -484,7 +484,7 @@ export default {
         },
         
         async fetchCountPlanNotYetSuccess() {
-            axios.get('https://nodejs-api-daily-porchoua.onrender.com/api/count-plan_not_yet_success')
+            axios.get('https://api-note-dailes.onrender.com/api/count-plan_not_yet_success')
                 .then(response => {
                     this.count_plan_not_yet_successes = response.data.count_plan_not_yet_success;
                 })
@@ -493,7 +493,7 @@ export default {
                 });
         },
         async fetchCountDay() {
-            axios.get('https://nodejs-api-daily-porchoua.onrender.com/api/count-day')
+            axios.get('https://api-note-dailes.onrender.com/api/count-day')
                 .then(response => {
                     this.count_days = response.data.count_day;
                 })
@@ -502,7 +502,7 @@ export default {
                 });
         },
         async fetchSumIncome() {
-            axios.get('https://nodejs-api-daily-porchoua.onrender.com/api/sum-income')
+            axios.get('https://api-note-dailes.onrender.com/api/sum-income')
                 .then(response => {
                     this.sum_incomes = response.data.sum_income;
                 })
@@ -511,7 +511,7 @@ export default {
                 });
         },
         async fetchSumExpenditure() {
-            axios.get('https://nodejs-api-daily-porchoua.onrender.com/api/sum-expenditure')
+            axios.get('https://api-note-dailes.onrender.com/api/sum-expenditure')
                 .then(response => {
                     this.sum_expenditures = response.data.sum_expenditure;
                 })
@@ -520,7 +520,7 @@ export default {
                 });
         },
         async fetchSumMoneyRemaining() {
-            axios.get('https://nodejs-api-daily-porchoua.onrender.com/api/sum-money_remaining')
+            axios.get('https://api-note-dailes.onrender.com/api/sum-money_remaining')
                 .then(response => {
                     this.sum_money_remainings = response.data.sum_money_remaining;
                 })
@@ -529,7 +529,7 @@ export default {
                 });
         },
         async fetchSumExpenditureToday() {
-            axios.get('https://nodejs-api-daily-porchoua.onrender.com/api/sum-expenditure_todays')
+            axios.get('https://api-note-dailes.onrender.com/api/sum-expenditure_todays')
                 .then(response => {
                     this.sum_expenditure_today_s = response.data.sum_expenditure_todays;
                 })

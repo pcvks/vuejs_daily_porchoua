@@ -72,7 +72,6 @@
                       <td>{{ school_table.second_time }}</td>
                       <td>{{ school_table.third_time }}</td>
                       <td>{{ school_table.fourth_time }}</td>
-                      <td><b class="text-success">{{ school_table.timestamp }}</b></td>
                       <td>
                           
                         <button
@@ -190,7 +189,7 @@
       // for Income
       async fetchSchool_Table() {
         try {
-          const response = await axios.get("https://nodejs-api-daily-porchoua.onrender.com/api/school_table");
+          const response = await axios.get("https://api-note-dailes.onrender.com/api/school_table");
           if (Array.isArray(response.data)) {
             this.school_tables = response.data;
           } else {
@@ -207,7 +206,7 @@
       async createSchool_Table() {
         try {
           const response = await axios.post(
-            "https://nodejs-api-daily-porchoua.onrender.com/api/create-school_table",
+            "https://api-note-dailes.onrender.com/api/create-school_table",
             {
               days: this.day_inp,
               first_time: this.first_time_inp,
@@ -263,7 +262,7 @@
       async deleteSchool_Table(School_Table_ID) {
         try {
           const response = await axios.delete(
-            `https://nodejs-api-daily-porchoua.onrender.com/api/delete-school_table/${School_Table_ID}`
+            `https://api-note-dailes.onrender.com/api/delete-school_table/${School_Table_ID}`
           );
           console.log(response.data); // Log the response from the server
           Swal.fire({

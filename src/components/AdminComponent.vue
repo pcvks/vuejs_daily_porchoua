@@ -193,7 +193,7 @@ export default {
         // for Admin
         async fetchAdmins_a() {
             try {
-                const response = await axios.get('https://nodejs-api-daily-porchoua.onrender.com/api/admin');
+                const response = await axios.get('https://api-note-dailes.onrender.com/api/admin');
                 if (Array.isArray(response.data)) {
                     this.admins_a = response.data;
                 } else {
@@ -207,7 +207,7 @@ export default {
         },
         async createAdmin_a() {
             try {
-                const response = await axios.post('https://nodejs-api-daily-porchoua.onrender.com/api/create-admin', {
+                const response = await axios.post('https://api-note-dailes.onrender.com/api/create-admin', {
                     name: this.Name_a,
                     email: this.email_a,
                     password: this.password_a,
@@ -260,7 +260,7 @@ export default {
 
         async deleteAdmin_a(userId) {
             try {
-                const response = await axios.delete(`https://nodejs-api-daily-porchoua.onrender.com/api/delete-admin/${userId}`);
+                const response = await axios.delete(`https://api-note-dailes.onrender.com/api/delete-admin/${userId}`);
                 console.log(response.data); // Log the response from the server
                 Swal.fire({
                     title: "ລົບລ້າງ!",
@@ -333,7 +333,7 @@ export default {
         async fetchAdminDetails(Admin_ID) {
             this.Admin_ID = Admin_ID; // Set the current category ID
             try {
-                const response = await axios.get(`https://nodejs-api-daily-porchoua.onrender.com/api/admin/${Admin_ID}`);
+                const response = await axios.get(`https://api-note-dailes.onrender.com/api/admin/${Admin_ID}`);
                 this.updatedName = response.data.name;// Set the existing category name to the input field
                 this.updatedemail = response.data.email;
                 this.updatedpassword = '';
@@ -345,7 +345,7 @@ export default {
         },
         async updateAdmin() {
             try {
-                const response = await axios.put(`https://nodejs-api-daily-porchoua.onrender.com/api/update-admin/${this.Admin_ID}`, {
+                const response = await axios.put(`https://api-note-dailes.onrender.com/api/update-admin/${this.Admin_ID}`, {
                     name: this.updatedName,
                     email: this.updatedemail,
                     password: this.updatedpassword,

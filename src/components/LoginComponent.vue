@@ -55,7 +55,7 @@
     methods: {
       async login() {
         try {
-          const response = await axios.post('https://nodejs-api-daily-porchoua.onrender.com/login', {
+          const response = await axios.post('https://api-note-dailes.onrender.com/login', {
             phone: this.phone,
             password: this.password
           });
