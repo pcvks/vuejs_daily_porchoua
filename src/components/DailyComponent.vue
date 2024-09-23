@@ -87,7 +87,10 @@
                                                 @click="fetchDailyDetails(daily_d.id)" data-target="#modal-lg"><i
                                                     class="fas fa-edit"></i></button>&nbsp;<button
                                                 @click="confirmDelete_d(daily_d.id)" class="btn btn-danger"><i
-                                                    class="fas fa-times"></i></button></td>
+                                                    class="fas fa-times"></i></button>&nbsp;
+                                                    <button href="#" class="btn btn-success" data-toggle="modal"
+                                                @click="fetchDailyDetails(daily_d.id)" data-target="#modal-view"><i
+                                                    class="fas fa-eye"></i></button></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -353,6 +356,48 @@
                                     <button type="submit" class="btn btn-primary">ບັນທຶກ</button>
                                 </div>
                             </form>
+                        </div>
+                        <!-- /.modal-content -->
+                    </div>
+                    <!-- /.modal-dialog -->
+                </div>
+                <div class="modal fade" id="modal-view">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header bg-primary">
+                                <h4 class="modal-title">ເພີ່ມຂໍ້ມູນກິດຈະກຳ</h4>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            
+                                <div class="modal-body">
+                                    <div class="row">
+                                        <p class="mr-5"><b class="text-primary">05:00-06:00</b><br><b class="text-danger">{{ five_six_dp }}</b></p>
+                                    <p class="mr-5"><b class="text-primary">06:00-07:00</b><br><b class="text-danger">{{ six_seven_dp }}</b></p>
+                                    <p class="mr-5"><b class="text-primary">07:00-08:00</b><br><b class="text-danger">{{ seven_eight_dp }}</b></p>
+                                    <p class="mr-5"><b class="text-primary">08:00-09:00</b><br><b class="text-danger">{{ eight_nine_dp }}</b></p>
+                                    <p class="mr-5"><b class="text-primary">09:00-10:00</b><br><b class="text-danger">{{ nine_ten_dp }}</b></p>
+                                    <p class="mr-5"><b class="text-primary">10:00-11:00</b><br><b class="text-danger">{{ ten_eleven_dp }}</b></p>
+                                    <p class="mr-5"><b class="text-primary">11:00-12:00</b><br><b class="text-danger">{{ eleven_twelve_dp }}</b></p>
+                                    <p class="mr-5"><b class="text-primary">12:00-13:00</b><br><b class="text-danger">{{ twelve_thirteen_dp }}</b></p>
+                                    <p class="mr-5"><b class="text-primary">13:00-14:00</b><br><b class="text-danger">{{ thirteen_fourteen_dp }}</b></p>
+                                    <p class="mr-5"><b class="text-primary">14:00-15:00</b><br><b class="text-danger">{{ fourteen_fifteen_dp }}</b></p>
+                                    <p class="mr-5"><b class="text-primary">15:00-16:00</b><br><b class="text-danger">{{ fifteen_sixteen_dp }}</b></p>
+                                    <p class="mr-5"><b class="text-primary">16:00-17:00</b><br><b class="text-danger">{{ sixteen_seventeen_dp }}</b></p>
+                                    <p class="mr-5"><b class="text-primary">17:00-18:00</b><br><b class="text-danger">{{ seventeen_eighteen_dp }}</b></p>
+                                    <p class="mr-5"><b class="text-primary">18:00-19:00</b><br><b class="text-danger">{{ eighteen_nineteen_dp }}</b></p>
+                                    <p class="mr-5"><b class="text-primary">19:00-20:00</b><br><b class="text-danger">{{ nineteen_twenty_dp }}</b></p>
+                                    <p class="mr-5"><b class="text-primary">20:00-21:00</b><br><b class="text-danger">{{ twenty_twentyone_dp }}</b></p>
+                                    <p class="mr-5"><b class="text-primary">21:00-22:00</b><br><b class="text-danger">{{ twentyone_twentytwo_dp }}</b></p>
+                                    <p class="mr-5"><b class="text-primary">22:00-23:00</b><br><b class="text-danger">{{ twentytwo_twentythree_dp }}</b></p>
+                                    <p class="mr-5"><b class="text-primary">23:00-05:00</b><br><b class="text-danger">{{ twentythree_five_dp }}</b></p> 
+                                    </div>
+                                </div>
+                                <div class="modal-footer w-100">
+                                    <button type="button" class="btn btn-danger" data-dismiss="modal">ຍົກເລີກ</button>
+                                    
+                                </div>
                         </div>
                         <!-- /.modal-content -->
                     </div>
