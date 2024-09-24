@@ -45,8 +45,7 @@
                         </div>
                     </div>
                     <!-- ./col -->
-                    <div class="col-lg-3 col-6">
-                        <!-- small box -->
+                    <!-- <div class="col-lg-3 col-6">
                         <div class="small-box bg-success">
                             <div class="inner">
                                 <h4 class="text-bold">{{ sum_income_by_mom_s }} ₭</h4>
@@ -58,7 +57,7 @@
                             <a href="#" class="small-box-footer">ລາຍລະອຽດ<i
                                     class="fas fa-arrow-circle-right"></i></a>
                         </div>
-                    </div>
+                    </div> -->
                     <div class="col-lg-3 col-6">
                         <!-- small box -->
                         <div class="small-box bg-danger">
@@ -105,8 +104,8 @@
                         </div>
                     </div>
                     
-                    <div class="col-lg-3 col-6">
-                        <!-- small box -->
+                    <!-- <div class="col-lg-3 col-6">
+                        
                         <div class="small-box bg-danger">
                             <div class="inner">
                                 <h4 class="text-bold">{{ sum_expenditure_this_month_s }} ₭</h4>
@@ -118,10 +117,10 @@
                             <a href="./expendituredetailform.php" class="small-box-footer">ລາຍລະອຽດ<i
                                     class="fas fa-arrow-circle-right"></i></a>
                         </div>
-                    </div>
+                    </div> -->
                     
-                    <div class="col-lg-3 col-6">
-                        <!-- small box -->
+                    <!-- <div class="col-lg-3 col-6">
+                        
                         <div class="small-box bg-info">
                             <div class="inner">
                                 <h4 class="text-bold">{{ sum_income_by_month_s }} ₭</h4>
@@ -133,7 +132,7 @@
                             <a href="./expendituredetailform.php" class="small-box-footer">ລາຍລະອຽດ<i
                                     class="fas fa-arrow-circle-right"></i></a>
                         </div>
-                    </div>
+                    </div> -->
                     <!-- ./col -->
                 </div>
                 <div class="row">
