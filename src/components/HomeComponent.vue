@@ -250,7 +250,7 @@
                                         <td>{{ daily_d.twentyone_twentytwo }}</td>
                                         <td>{{ daily_d.twentytwo_twentythree }}</td>
                                         <td>{{ daily_d.twentythree_five }}</td>
-                                        <td>{{ daily_d.day }}</td>
+                                        <td>{{ daily_d.days }}</td>
                                         <td><b class="text-success">{{ daily_d.timestamp }}</b></td>
                                         <td><button href="#" class="btn btn-warning" data-toggle="modal"
                                                 @click="fetchDailyDetails(daily_d.id)" data-target="#modal-lg"><i
