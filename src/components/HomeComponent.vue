@@ -365,7 +365,7 @@ export default {
                     twentyone_twentytwo: this.twentyone_twentytwo_d,
                     twentytwo_twentythree: this.twentytwo_twentythree_d,
                     twentythree_five: this.twentythree_five_d,
-                    day_d: this.day_d,
+                    days: this.day_d,
                     timestamp: this.timestamp
                 });
                 console.log(response.data);
