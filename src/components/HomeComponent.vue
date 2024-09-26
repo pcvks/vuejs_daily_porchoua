@@ -543,9 +543,9 @@ export default {
                 });
         },
         async fetchCountDay() {
-            axios.get('https://api-note-dailes.onrender.com/api/count-day')
+            axios.get('https://api-note-dailes.onrender.com/api/count-days')
                 .then(response => {
-                    this.count_days = response.data.count_day;
+                    this.count_days = response.data.count_days;
                 })
                 .catch(error => {
                     console.error('There was an error fetching the count:', error);
