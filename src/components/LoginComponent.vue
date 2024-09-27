@@ -27,7 +27,7 @@
               <div class="row">
                 
                   <button type="submit" class="btn btn-primary btn-block w-100"><i
-                      class="fas fa-sign-out-alt">Login</i></button>
+                      class="fas fa-sign-out-alt">ເຂົ້າສູ່ລະບົບ</i></button>
                 
               </div>
             </form>
