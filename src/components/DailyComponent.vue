@@ -98,7 +98,7 @@
                 </div>
                 
                 <div class="modal fade" id="modal-lg">
-                    <div class="modal-dialog modal-lg">
+                    <div class="modal-dialog modal-xl">
                         <div class="modal-content">
                             <div class="modal-header bg-info">
                                 <h4 class="modal-title">ແກ້ໄຂຂໍ້ມູນກິດຈະກຳ</h4>
