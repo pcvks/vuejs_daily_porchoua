@@ -392,6 +392,7 @@
                                     <p class="mr-5"><b class="text-success">21:00-22:00</b><br><b class="text-danger">{{ twentyone_twentytwo_dp }}</b></p>
                                     <p class="mr-5"><b class="text-success">22:00-23:00</b><br><b class="text-danger">{{ twentytwo_twentythree_dp }}</b></p>
                                     <p class="mr-5"><b class="text-success">23:00-05:00</b><br><b class="text-danger">{{ twentythree_five_dp }}</b></p> 
+                                    <p class="mr-5"><b class="text-success">ວັນ</b><br><b class="text-danger">{{ day_dp }}</b></p> 
                                     </div>
                                 </div>
                                 <div class="modal-footer w-100">
